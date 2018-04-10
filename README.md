@@ -1,7 +1,7 @@
 # Project_server
 
 #User signup
-``javascript
+```javascript
 //POST http://localhost:8080/user/signup
 //request example:
 {
@@ -16,7 +16,7 @@
 ```
 
 #User Login
-``javascript
+```javascript
 //POST http://localhost:8080/user/login
 //request example:
 {
@@ -26,7 +26,7 @@
 ```
 
 #Add Pro
-``javascript
+```javascript
 //POST http://localhost:8080/api/pro
 //request example:
 {
@@ -41,13 +41,13 @@
 ```
 
 #Get a pro by service type
-``javascript
+```javascript
 //request example:
 //GET http://localhost:8080/api/pro/maid
 ```
 
 #Add new service
-``javascript
+```javascript
 //POST http://localhost:8080/api/service
 //request example:
 {
@@ -58,22 +58,22 @@
   "serviceDate": "2018/04/20",
   "serviceType": "maid"
 }
-``
+```
 
 #Get service by user Id
-``javascript
+```javascript
 //request example:
 //GET http://localhost:8080/api/service/user/5acd10d01cc4d7424836de22
-``
+```
 
 #Get service by pro Id
-``javascript
+```javascript
 //request example:
 //GET http://localhost:8080/api/service/pro/5acd20c45fcd1053ac4bf85c
-``
+```
 
 #update service review from customer
-``javascript
+```javascript
 //PUT http://localhost:8080/api/service/5acd244e0892390b086789bb
 //request example:
 {
@@ -81,10 +81,10 @@
   "customerComment": "Good",
   "customerSatisfied": true
 }
-``
+```
 
 #update service review from pro
-``javascript
+```javascript
 //PUT http://localhost:8080/api/service/5acd244e0892390b086789bb
 //request example:
 {
@@ -92,4 +92,4 @@
   "proComment": "Bad",
   "proSatisfied": false
 }
-``
+```
