@@ -13,4 +13,7 @@ module.exports.connect = (uri) => {
 
   // load models
   require('./user');
+  require('./pro');
+  require('./service');
+  require('./transaction');
 };
