@@ -35,7 +35,13 @@ const ServiceSchema = new mongoose.Schema({
   isCompleted: {
     type: Boolean,
     default: false
-  }
+  },
+  customerReview: Number,
+  customerComment: String,
+  customerSatisfied: Boolean,
+  proReview: Number,
+  proComment: String,
+  proSatisfied: Boolean
 });
 
 module.exports = mongoose.model('Service', ServiceSchema);

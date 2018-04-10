@@ -6,17 +6,25 @@ var transControl = require('../controllers/transController')
 var router = express.Router()
 
 // API routes for service
-router.route('/api/service/:uid/:pid')
-  .get(serviceControl.getServiceById)
+router.route('/service/user/:uid')
+  .get(serviceControl.getServiceByUId)
+
+router.route('/service/pro/:pid')
+  .get(serviceControl.getServiceByPId)
+
+router.route('/service')
   .post(serviceControl.addNewService)
+
+router.route('/service/:id')
   .put(serviceControl.updateService)
 
-// API for user inbox
-router.route('/api/pro/:zip')
-  .get(proControl.get)
+router.route('/pro/:type')
+  .get(proControl.getOnePro)
 
-// API routes for projects
-router.route('/api/transaction')
-  .post(projectControl.addTransaction)
+router.route('/pro')
+  .post(proControl.addPro)
+
+router.route('/transaction')
+  .post(transControl.addTransaction)
 
 module.exports = router

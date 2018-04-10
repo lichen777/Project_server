@@ -22,6 +22,10 @@ const ProSchema = new mongoose.Schema({
   address: {
     type: String
   },
+  type: {
+    type: String,
+    enum: ["lawn", "maid"]
+  },
   bankAccount: {
     type: Number
   }
