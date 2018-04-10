@@ -15,5 +15,5 @@ module.exports.connect = (uri) => {
   require('./user');
   require('./pro');
   require('./service');
-  require('./transaction');
+  require('./trans');
 };

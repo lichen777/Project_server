@@ -6,7 +6,11 @@ const bodyParser = require('body-parser');
 
 const app = express();
 
-const config = require('./config')
+const config = require('./config/index.json')
+
+const passport = require('passport')
+app.use(passport.initialize())
+
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -26,7 +30,7 @@ require('./models').connect(MONGODB_URI);
 
 // pass the authenticaion checker middleware
 const authCheck = require('./middleware/authCheck');
-app.use('/user', authCheck);
+//app.use('/user', authCheck);
 
 // routes
 const indexRouter = require('./routes/index');
@@ -34,5 +38,6 @@ const userRouter = require('./routes/users');
 app.use('/', indexRouter);
 app.use('/user', userRouter);
 
+require('./config/passport')(passport)
 
 module.exports = app;

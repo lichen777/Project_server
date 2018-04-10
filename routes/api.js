@@ -1,8 +1,7 @@
 var express = require('express')
-var userControl = require('../controllers/userController')
 var serviceControl = require('../controllers/serviceController')
 var proControl = require('../controllers/proController')
-var transactionControl = require('../controllers/transactionControl')
+var transControl = require('../controllers/transController')
 
 var router = express.Router()
 

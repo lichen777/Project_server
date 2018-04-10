@@ -13,6 +13,7 @@
     "express": "^4.14.0",
     "express-jwt": "^3.4.0",
     "jwks-rsa": "^1.2.1",
+    "mongoose": "^5.0.14",
     "morgan": "~1.9.0",
     "passport": "^0.4.0",
     "passport-local": "^1.0.0"
